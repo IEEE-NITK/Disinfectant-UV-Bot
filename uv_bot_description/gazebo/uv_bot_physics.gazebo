@@ -1,0 +1,69 @@
+<?xml version="1.0" ?>
+<robot name="uv_bot" xmlns:xacro="http://www.ros.org/wiki/xacro" >
+
+<xacro:property name="std_friction" value="1.0" />
+<xacro:property name="caster_friction" value="0.01" />
+<xacro:property name="wheel_friction" value="100.0" />
+
+<gazebo reference="base_link">
+  <mu1>${std_friction}</mu1>
+  <mu2>${std_friction}</mu2>
+  <selfCollide>true</selfCollide>
+  <gravity>true</gravity>
+</gazebo>
+
+<gazebo reference="wheel_right_1">
+  <mu1>${wheel_friction}</mu1>
+  <mu2>${wheel_friction}</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="wheel_left_1">
+  <mu1>${wheel_friction}</mu1>
+  <mu2>${wheel_friction}</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="camera_1">
+  <mu1>${std_friction}</mu1>
+  <mu2>${std_friction}</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="uss_fr_1">
+  <mu1>${std_friction}</mu1>
+  <mu2>${std_friction}</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="uss_fl_1">
+  <mu1>${std_friction}</mu1>
+  <mu2>${std_friction}</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="uss_bl_1">
+  <mu1>${std_friction}</mu1>
+  <mu2>${std_friction}</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="uss_br_1">
+  <mu1>${std_friction}</mu1>
+  <mu2>${std_friction}</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="caster_front_1">
+  <mu1>${caster_friction}</mu1>
+  <mu2>${caster_friction}</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="caster_back_1">
+  <mu1>${caster_friction}</mu1>
+  <mu2>${caster_friction}</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+</robot>
